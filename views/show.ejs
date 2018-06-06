@@ -1,0 +1,25 @@
+<%include partials/header%>
+
+<div class="thumbnail" style="background-color:lightgrey;">
+<th><h5 style="padding-left:10%;text-align:left;"> <a href="/ques/<%=forums._id%>"><img style="width:50px;height:50px;margin-left:0px"src="<%=forums.image %>"></a><strong><%= forums.ask.username%></strong> ,<%=forums.created.toDateString()%></h5></th>
+<div class="thumbnail" style="height:80px">
+
+<td><p><%=forums.body%></p></td>
+</div>
+<tr>
+	<h6 style="color:green"><%=forums.comments.length%> Answers</h6>
+
+<% forums.comments.forEach(function(comment){ %>
+<div class="thumbnail" style="width:100%;height:auto;">
+
+		<p><strong><%=comment.author%></strong>-<%=comment.text%></p>
+		<img src="<%=comment.image%>">
+
+	</div>
+
+<%})%>
+
+</tr>
+
+
+</div>

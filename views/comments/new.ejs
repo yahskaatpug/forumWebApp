@@ -1,0 +1,28 @@
+<%include ../partials/header%>
+<div class="container">
+ <div class="row">
+ <h1 style="text-align: center">Add Comment </h1>
+ <hr>
+ <div style="width:30%;margin:0  auto;">
+<form action="/ques/<%= forums._id %>/comments" method="POST">
+  <p>
+  <input class="thumbnail"style="width:500px;" type="text" name="author" placeholder="author">
+  </p>
+
+<p>
+  <input class="thumbnail"style="width:500px;" type="text" name="image" placeholder="image">
+  </p>
+
+
+ <p>
+ <textarea class="thumbnail" style="width:500px;height:200px;" type="text" name="text" placeholder="text"></textarea>
+</p>
+
+
+ <p class="full">
+   <button type="submit" class="btn btn-info">Submit</button>
+
+</form>
+ </div>
+       </div>
+</div>
